@@ -1,0 +1,79 @@
+.tituloGeneral{
+    margin: 0 auto;
+    text-align:  center;
+    h1{
+        font-size: 25px;
+        color: $text-color;
+        margin: 15px;
+        body.dark & {
+            color: $text-color-inverse;
+        }
+    }
+}
+
+.prestamos{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    .imagenPrestamos{
+        padding: 15px;
+        img{
+            width: 100%;
+        }
+    }
+    .textoPrestamos{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px;
+        justify-content: center;
+        text-align: center;
+        body.dark & {
+            color: $text-color-inverse;
+        }
+        .textoPrestamosParrafo{
+            display: flex;
+            flex-direction: row;
+            text-align: justify;
+        }
+    }
+}
+
+.valorFinal{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    .imagenValorFinal{
+        padding: 15px;
+        img{
+            width: 100%;
+        }
+    }
+    .textoValorFinal{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px;
+        justify-content: center;
+        text-align: center;
+        body.dark & {
+            color: $text-color-inverse;
+        }
+        .textoValorFinalParrafo{
+            text-align: justify;
+        }
+    }
+}
+
+.btnIr {
+    background-color: $primary-color;
+            color: $text-color-inverse;
+            border: none;
+            font-size: 20px;
+            padding: 0.5em 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover{
+                filter: brightness(150%);
+            }
+}
