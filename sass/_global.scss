@@ -25,7 +25,7 @@ body{
     text-decoration-color: $text-color;
     padding-top: 70px;
     transition: .8s ease all;
-    &.dark{
+    &.dark {
         background-color: $switch-theme-color;
     }
 }
