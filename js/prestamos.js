@@ -22,7 +22,7 @@ alert("Bienvenido " + nombre + "!!!\n\n" + "A continuación le informamos el int
 + "Entre 7 y 12 cuotas: 40% \n"
 + "Entre 13 y 24 cuotas: 60% \n"
 + "Entre 25 y 48 cuotas: 80% \n"
-+ "Más de 48 cuotas: 100%");
++ "Entre 48 y 72 cuotas: 100%");
 
 
 const validarEdad = () => {
@@ -46,7 +46,7 @@ if (edad < 18) {
         let monto = parseFloat(prompt("Ingrese el monto que quiera pedir prestado:"));
         console.log(monto);
         while ((monto === "") || (isNaN(monto))) {
-            monto = prompt("Ingrese correctamente el monto:");
+            monto = parseFloat(prompt("Ingrese correctamente el monto:"));
         }
         console.log(monto);
         return monto;
@@ -56,8 +56,8 @@ if (edad < 18) {
     const validarCantidadCuotas = () => {
         let cantidadCuotas = parseFloat(prompt("Ingrese la cantidad de cuotas:"));
         console.log(cantidadCuotas);
-        while ((cantidadCuotas === "") || (isNaN(cantidadCuotas))) {
-            cantidadCuotas = prompt("Ingrese correctamente la cantidad de cuotas:");
+        while (isNaN(cantidadCuotas) || cantidadCuotas === "" || cantidadCuotas > 72 || cantidadCuotas === 0) {
+            cantidadCuotas = parseFloat(prompt("Ingrese correctamente la cantidad de cuotas. (Recuerda que el máximo son 72 cuotas"));
         }
         console.log(cantidadCuotas);
         return cantidadCuotas;
@@ -104,7 +104,7 @@ if (edad < 18) {
             + "\n\n" + "El interes es del " + ((interes * 100 -100)) + "%." 
             + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas).toFixed(2));
 
-        } else if (cantidadCuotas > 48) {
+        } else if (cantidadCuotas > 48 && cantidadCuotas <=72) {
             interes = 2;
             montoCuota = ((monto * interes) / cantidadCuotas);
             console.log(monto);
@@ -113,9 +113,6 @@ if (edad < 18) {
             alert("Ud pagará " + cantidadCuotas + " cuotas fijas de: \n\n" + "$" + (montoCuota.toFixed(2)) 
             + "\n\n" + "El interes es del " + ((interes * 100 - 100)) + "%." 
             + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas).toFixed(2));
-        
-        } else {
-            alert("Ingrese correctamente el monto y la cantidad de cuotas");
         }
 } 
 
