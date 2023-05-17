@@ -87,6 +87,9 @@ body.dark .valorFinal .textoValorFinal {
   text-align: center;
   justify-content: center;
 }
+.relleno button {
+  margin-bottom: 15px;
+}
 
 /* 
 font-family: 'Merriweather Sans', sans-serif;
