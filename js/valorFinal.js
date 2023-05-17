@@ -1,10 +1,22 @@
+let nombre;
 let costoProducto;
 const IVA = 1.21;
 let beneficioProducto;
 let costoTotalProducto;
 let precioCompetencia;
 
-let saludo = ("Bienvenido al simulador de precios, debe ingresar 3 valores: \n 1- Costo de fabricación del producto.\n 2- Beneficio que quiere obtener, en % (respecto del costo). \n 3- Precio de la competencia.");
+const validarNombre = () => {
+    let nombre = prompt("Para una atención mas personalizada, ingrese su nombre:").toUpperCase();
+    console.log(nombre);
+    while ((nombre === "") || (!/^[a-zA-Z]+$/.test(nombre))) {
+        nombre = prompt("Ingrese correctamente su nombre:").toUpperCase();
+    }
+    console.log(nombre);
+    return nombre;
+}
+nombre = validarNombre();
+
+let saludo = ("Bienvenido " + nombre + ", al simulador de precios, debe ingresar 3 valores: \n 1- Costo de fabricación del producto.\n 2- Beneficio que quiere obtener, en % (respecto del costo). \n 3- Precio de la competencia.");
 alert(saludo);
 
 const validarCostoProducto = () => {
@@ -29,18 +41,18 @@ const validarBeneficioProducto = () => {
 }
 beneficioProducto = validarBeneficioProducto();
 
-const CostoFinalProducto = () => {
-    let costoTotalProducto = ((costoProducto + (costoProducto * (beneficioProducto / 100))) * IVA).toFixed(2);
+const CostoTotalProducto = () => {
+    costoTotalProducto = ((costoProducto + (costoProducto * (beneficioProducto / 100))) * IVA).toFixed(2);
     console.log(costoTotalProducto);
     return costoTotalProducto;
 }
-costoTotalProducto = CostoFinalProducto();
+costoTotalProducto = CostoTotalProducto();
+
 alert("El costo final del producto es: $" + costoTotalProducto +
 "\n\n El costo total se compone de: \n" + 
 "1- Costo para fabricar el producto: $" + costoProducto + 
 "\n2- Beneficio: $" + (costoProducto * (beneficioProducto / 100)) + ". (" + beneficioProducto + "%)" + 
-"\n3- IVA: $" + ((((costoProducto + (costoProducto * (beneficioProducto / 100))) * IVA)) - costoProducto - beneficioProducto).toFixed(2)
-);
+"\n3- IVA: $" + ((costoTotalProducto - ((costoProducto * (beneficioProducto / 100)) + costoProducto))).toFixed(2) + " (21% del total)");
 
 let saludo2 = ("Para comparar su producto respecto de otros, ingrese el precio de la competencia:");
 alert(saludo2);
@@ -48,13 +60,14 @@ alert(saludo2);
 const validarPrecioCompetencia = () => {
     let precioCompetencia = parseFloat(prompt("Ingrese el precio del producto de la competencia:"));
     console.log(precioCompetencia);
-    while ((isNaN(precioCompetencia)) || (precioCompetencia <= 0)) {
-        precioCompetencia = prompt("Por favor, ingrese correctamente el precio de la competencia:");
+    while ((isNaN(precioCompetencia)) || (precioCompetencia <= 0) || (precioCompetencia < (costoProducto * IVA))) {
+        precioCompetencia = prompt("Por favor, ingrese correctamente el precio de la competencia. \nIMPORTANTE! El precio de la competencia debe ser mayor al costo de producción + el IVA de su producto (en este caso el mínimo debe ser: $" + (costoProducto * IVA) + ")");
     }
     console.log(precioCompetencia);
     return precioCompetencia;
 }
 precioCompetencia = validarPrecioCompetencia();
+
 
     if (costoTotalProducto > precioCompetencia) {
         diferencia = (((costoTotalProducto - precioCompetencia) / costoTotalProducto) * 100).toFixed(2);

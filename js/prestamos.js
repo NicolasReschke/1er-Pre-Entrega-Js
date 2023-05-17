@@ -72,7 +72,7 @@ if (edad < 18) {
             console.log(montoCuota);
             alert("Ud pagará " + cantidadCuotas + " cuotas fijas de: \n\n" + "$" + (montoCuota.toFixed(2)) 
             + "\n\n" + "El interes es del " + ((interes * 100 -100)) + "%." 
-            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas));
+            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas).toFixed(2));
 
         } else if (cantidadCuotas > 6 && cantidadCuotas <=12) {
             interes = 1.4;
@@ -82,7 +82,7 @@ if (edad < 18) {
             console.log(montoCuota);
             alert("Ud pagará " + cantidadCuotas + " cuotas fijas de: \n\n" + "$" + (montoCuota.toFixed(2)) 
             + "\n\n" + "El interes es del " + ((interes * 100 -100)) + "%." 
-            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas));
+            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas).toFixed(2));
 
         } else if (cantidadCuotas > 12 && cantidadCuotas <=24) {
             interes = 1.6;
@@ -92,7 +92,7 @@ if (edad < 18) {
             console.log(montoCuota);
             alert("Ud pagará " + cantidadCuotas + " cuotas fijas de: \n\n" + "$" + (montoCuota.toFixed(2)) 
             + "\n\n" + "El interes es del " + ((interes * 100 -100)) + "%." 
-            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas));
+            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas).toFixed(2));
 
         } else if (cantidadCuotas > 24 && cantidadCuotas <=48) {
             interes = 1.8;
@@ -102,7 +102,7 @@ if (edad < 18) {
             console.log(montoCuota);
             alert("Ud pagará " + cantidadCuotas + " cuotas fijas de: \n\n" + "$" + (montoCuota.toFixed(2)) 
             + "\n\n" + "El interes es del " + ((interes * 100 -100)) + "%." 
-            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas));
+            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas).toFixed(2));
 
         } else if (cantidadCuotas > 48) {
             interes = 2;
@@ -112,7 +112,7 @@ if (edad < 18) {
             console.log(montoCuota);
             alert("Ud pagará " + cantidadCuotas + " cuotas fijas de: \n\n" + "$" + (montoCuota.toFixed(2)) 
             + "\n\n" + "El interes es del " + ((interes * 100 - 100)) + "%." 
-            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas));
+            + "\n" + "Ud. devolverá un total de: $" + (montoCuota * cantidadCuotas).toFixed(2));
         
         } else {
             alert("Ingrese correctamente el monto y la cantidad de cuotas");

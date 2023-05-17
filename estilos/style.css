@@ -79,18 +79,6 @@ body.dark .valorFinal .textoValorFinal {
   filter: brightness(150%);
 }
 
-.relleno {
-  height: 63vh;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-}
-.relleno button {
-  margin-bottom: 15px;
-}
-
 /* 
 font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Open Sans', sans-serif;
@@ -136,6 +124,17 @@ a {
 .vertical-padding {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+.relleno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+.relleno button {
+  margin: 10px auto;
 }
 
 .topheader {
@@ -417,11 +416,11 @@ body.dark .footerContainer .grupo1 .cajaFooter .parrafoFooter {
     flex-wrap: wrap;
   }
   /* ============== Index ============== */
-  /* ============== prestamos.html ============== */
+  /* ============== Prestamo/ValorFinal ============== */
   .relleno {
-    height: 50vh;
+    margin: 50px auto;
   }
-  /* ============== prestamos.html ============== */
+  /* ============== Prestamo/ValorFinal ============== */
   /* ============== footer ============== */
   .footerContainer .grupo1 {
     width: 90%;
