@@ -68,29 +68,15 @@ h1{
     font-size: 40px;
 }
 
-.prestamos{
+.entradas{
     flex-wrap: wrap;
     justify-content: center;
-    .imagenPrestamos{
+    .imagenEntradas{
         img{
             max-width: 370px;
         }
     }
-    .textoPrestamos{
-        padding: 5px;
-        flex-wrap: wrap;
-    }
-}
-
-.valorFinal{
-    flex-wrap: wrap;
-    justify-content: center;
-    .imagenValorFinal{
-        img{
-            max-width: 370px;
-        }
-    }
-    .textoValorFinal{
+    .textoEntradas{
         padding: 5px;
         flex-wrap: wrap;
     }
@@ -99,9 +85,9 @@ h1{
 
 
 /* ============== Prestamo/ValorFinal ============== */
-.relleno {
+/* .relleno {
     margin: 50px auto;
-}
+} */
 /* ============== Prestamo/ValorFinal ============== */
 
 

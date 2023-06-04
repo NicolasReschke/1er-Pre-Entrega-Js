@@ -12,18 +12,18 @@ body.dark .tituloGeneral h1 {
   color: rgb(224, 224, 224);
 }
 
-.prestamos {
+.entradas {
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
 }
-.prestamos .imagenPrestamos {
+.entradas .imagenEntradas {
   padding: 15px;
 }
-.prestamos .imagenPrestamos img {
+.entradas .imagenEntradas img {
   width: 100%;
 }
-.prestamos .textoPrestamos {
+.entradas .textoEntradas {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -31,42 +31,16 @@ body.dark .tituloGeneral h1 {
   justify-content: center;
   text-align: center;
 }
-body.dark .prestamos .textoPrestamos {
+body.dark .entradas .textoEntradas {
   color: rgb(224, 224, 224);
 }
-.prestamos .textoPrestamos .textoPrestamosParrafo {
+.entradas .textoEntradas .textoEntradasParrafo {
   display: flex;
   flex-direction: row;
   text-align: justify;
 }
 
-.valorFinal {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.valorFinal .imagenValorFinal {
-  padding: 15px;
-}
-.valorFinal .imagenValorFinal img {
-  width: 100%;
-}
-.valorFinal .textoValorFinal {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 30px;
-  justify-content: center;
-  text-align: center;
-}
-body.dark .valorFinal .textoValorFinal {
-  color: rgb(224, 224, 224);
-}
-.valorFinal .textoValorFinal .textoValorFinalParrafo {
-  text-align: justify;
-}
-
-.btnIr {
+.btnCompra {
   background-color: rgb(28, 58, 156);
   color: rgb(224, 224, 224);
   border: none;
@@ -75,8 +49,107 @@ body.dark .valorFinal .textoValorFinal {
   border-radius: 8px;
   cursor: pointer;
 }
-.btnIr:hover {
+.btnCompra:hover {
   filter: brightness(150%);
+}
+
+.numerito {
+  background-color: rgb(219, 160, 32);
+  color: rgb(28, 58, 156);
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.boton-carrito {
+  margin-top: 2rem;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+  color: antiquewhite;
+}
+
+.carrito-entradas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carrito-entrada {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(28, 58, 156);
+  color: antiquewhite;
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  border-radius: 1rem;
+}
+
+.carrito-entrada-imagen {
+  width: 4rem;
+  border-radius: 1rem;
+}
+
+.carrito-entrada small {
+  font-size: 0.75rem;
+}
+
+.carrito-entrada-eliminar {
+  border: 0;
+  background-color: transparent;
+  color: #961818;
+  cursor: pointer;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.carrito-acciones-vaciar {
+  border: 0;
+  background-color: rgb(28, 58, 156);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: antiquewhite;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.carrito-acciones-derecha {
+  display: flex;
+}
+
+.carrito-acciones-total {
+  display: flex;
+  background-color: rgb(28, 58, 156);
+  padding: 1rem;
+  color: antiquewhite;
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  gap: 1rem;
+}
+
+.carrito-acciones-comprar {
+  border: 0;
+  background-color: rgb(71, 101, 199);
+  padding: 1rem;
+  color: rgb(230, 230, 230);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.close-menu {
+  display: none;
+}
+
+.disabled {
+  display: none;
 }
 
 /* 
@@ -393,33 +466,22 @@ body.dark .footerContainer .grupo1 .cajaFooter .parrafoFooter {
   h1 {
     font-size: 40px;
   }
-  .prestamos {
+  .entradas {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .prestamos .imagenPrestamos img {
+  .entradas .imagenEntradas img {
     max-width: 370px;
   }
-  .prestamos .textoPrestamos {
-    padding: 5px;
-    flex-wrap: wrap;
-  }
-  .valorFinal {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .valorFinal .imagenValorFinal img {
-    max-width: 370px;
-  }
-  .valorFinal .textoValorFinal {
+  .entradas .textoEntradas {
     padding: 5px;
     flex-wrap: wrap;
   }
   /* ============== Index ============== */
   /* ============== Prestamo/ValorFinal ============== */
-  .relleno {
-    margin: 50px auto;
-  }
+  /* .relleno {
+      margin: 50px auto;
+  } */
   /* ============== Prestamo/ValorFinal ============== */
   /* ============== footer ============== */
   .footerContainer .grupo1 {
