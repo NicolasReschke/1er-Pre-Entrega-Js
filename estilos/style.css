@@ -199,17 +199,6 @@ a {
   padding-bottom: 25px;
 }
 
-.relleno {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 100px auto;
-}
-.relleno button {
-  margin: 10px auto;
-}
-
 .topheader {
   box-shadow: 0 4px 5px rgb(202, 202, 202);
   position: fixed;
@@ -244,7 +233,7 @@ body.dark .logo {
 }
 .logo img, .logo div {
   padding: 0 10px;
-  width: 50px;
+  width: 90px;
 }
 
 .menu {
