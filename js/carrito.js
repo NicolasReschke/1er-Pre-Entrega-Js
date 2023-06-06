@@ -131,8 +131,21 @@ function actualizarTotal() {
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
 
-    entradasEnCarrito.length = 0;
-    localStorage.setItem("entrada-en-carrito", JSON.stringify(entradasEnCarrito));
+    Swal.fire({
+        title: '¿Estás seguro?',
+        icon: 'question',
+        html: `Confirmas la compra de las entradas?`,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: 'Sí',
+        cancelButtonText: 'No'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            entradasEnCarrito.length = 0;
+            localStorage.setItem("entradas-en-carrito", JSON.stringify(entradasEnCarrito));
+            cargarEntradasCarrito();
+        }
+    })
     
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoEntradas.classList.add("disabled");
