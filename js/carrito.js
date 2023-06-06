@@ -132,13 +132,12 @@ botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
 
     Swal.fire({
-        title: '¿Estás seguro?',
-        icon: 'question',
-        html: `Confirmas la compra de las entradas?`,
-        showCancelButton: true,
+        title: 'Gracias por la compra!',
+        icon: 'success',
+        html: `Disfruta el show. Recuerda cargar los datos de tu grupo de amigos!`,
+        showCancelButton: false,
         focusConfirm: false,
         confirmButtonText: 'Sí',
-        cancelButtonText: 'No'
     }).then((result) => {
         if (result.isConfirmed) {
             entradasEnCarrito.length = 0;
